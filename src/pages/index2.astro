@@ -1,0 +1,150 @@
+---
+const title = 'Godspeed';
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Testipaddr from '../components/Testipaddr.astro';
+import CartFlyoutToggle from '../components/CartFlyoutToggle';
+import CartFlyout from '../components/CartFlyout';
+// import popupbtn
+import PopupBtn from '../components/PopupBtn'
+import Popupwithastro from '../components/Popupwithastro.astro'
+import type { loadComponents } from 'next/dist/server/load-components';
+---
+
+<Layout title="Welcome to Astro.">
+  
+  <div class="bg-gradient-to-r from-[rgba(2,4,5,255)] to-[rgba(3,5,6,255)] via-[rgba(28,8,45,255)] min-h-screen overflow-y-auto flex flex-col justify-center items-center">
+    <h1 class="text-white text-6xl custom-head pb-8">A Paradigm shift for the tech enablers</h1>
+    <div class="flex flex-row justify-center items-center gap-1">
+      <h6 class="text-white text-center">A paradigm shift for the tech enablers </h6>
+      <small><PopupBtn client:load /></small>
+    </div>
+    
+    <!-- <Popupwithastro /> -->
+    <!-- div for clients logos and images -->
+    <!-- <div class="max-w-screen-xl mx-auto mt-16 bg-opacity-30 bg-yellow-200">
+      <div class="flex justify-center">
+        overflow-x-scroll
+        <img src="https://ik.imagekit.io/qxht4gmwf/Godspeed/clients-GS.webp?updatedAt=1692595149244" alt="Logo 1" class="inline-block mx-2 md:mx-4 lg:mx-6 py-4" />
+      </div>
+    </div>
+     -->
+
+    <div class="flex flex-col items-center text-white">
+      <ul role="list" class="link-card-grid">
+        <Card
+          href="https://docs.godspeed.systems/docs/preface"
+          title="Developer"
+          body="Learn how Astro works and explore the official API docs."
+        />
+        <Card
+          href="https://astro.build/integrations/"
+          title="Business"
+          body="Supercharge your project with new frameworks and libraries."
+        />
+      </ul>
+      <h6>Select your experience with Godspeed.</h6>
+    </div>
+    <div class="text-white custom-h1-h6 mt-8 gap-3 flex flex-col justify-center items-center">
+      <h1 class="text-4xl">Tech innovation begins with you OR Develop, Deploy, Monitor</h1>
+      <h6 class="text-xl text-center">Godspeed is the all-in-one super framework designed for speed of innovation. Integrate your current favourite software with Godspeed at ease. Develop, deploy and monitor your tech products all in just a few weeks instead of months.</h6>
+    </div>
+    <div class="flex flex-col justify-center items-center mt-6 gap-3 pb-4">
+      <h1 class="text-3xl text-white">Godspeed offers</h1>
+      <ul class="flex flex-col justify-center items-start text-white gap-4 custom-ul">
+        <li class="text-white custom-li">
+          <p>- Microservice Framework - A 4th-Gen “batteries included” “configure over code” framework to build standardised  microservices in Nodejs and coming next - Java, Golang and Python.</p>
+        </li>
+        <li class="text-white">
+          <p>- Developer GPT & CLI - Ask questions on engineering or generate code, Docker files and Helm charts for your microservices. Coming next - develop full apps with UI.</p>
+        </li>
+        <li class="text-white">
+          <p>- Business Apps Framework - Create business apps with the framework with applications of Frappe and all the products under Frappeverse</p>
+        </li>
+        <li>
+          <p>- Developer Portal - All your tech infrastructure & services listed, documented, deployed & monitored from one place via Backstage.</p>
+        </li>
+        <li>
+          <p>- Observability Setup - Auto-configured dashboards of your deployed services using Grafana stack, whether self hosted or through Grafana cloud.</p>
+        </li>
+        <li>
+          <p>- CI/ CD Automation - Generate and customise CI/CD pipeline with git-ops, test automation, security scan, static code scan, image scan using Github actions, ArgoCD (or other tools).</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</Layout>
+
+  <style>
+    .astro-a {
+      position: absolute;
+      top: -32px;
+      left: 50%;
+      transform: translatex(-50%);
+      width: 220px;
+      height: auto;
+      z-index: -1;
+    }
+    h1 {
+      font-size: 4rem;
+      font-weight: 700;
+      line-height: 1;
+      text-align: center;
+      margin-bottom: 1em;
+    }
+    .custom-head{
+      padding-top: 50px;
+    }
+
+    .text-gradient1 {
+      color: #ffffff;
+      font-size: 50px;
+    }
+    .instructions {
+      margin-bottom: 2rem;
+      border: 1px solid rgba(var(--accent-light), 25%);
+      background: linear-gradient(
+        rgba(var(--accent-dark), 66%),
+        rgba(var(--accent-dark), 33%)
+      );
+      padding: 1.5rem;
+      border-radius: 8px;
+    }
+    .instructions code {
+      font-size: 0.8em;
+      font-weight: bold;
+      background: rgba(var(--accent-light), 12%);
+      color: rgb(var(--accent-light));
+      border-radius: 4px;
+      padding: 0.3em 0.4em;
+    }
+    .instructions strong {
+      color: rgb(var(--accent-light));
+    }
+    .link-card-grid {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      margin-top: 50px;
+      /* overflow: hidden; */
+    
+    }
+    @media (min-width: 768px) {
+      .link-card-grid{
+        flex-direction: row;
+      }
+    }
+    .custom-h1-h6{
+      width: 80%;
+    }
+    .custom-ul{
+     
+    }
+    .custom-li{
+
+    }
+  </style>
+

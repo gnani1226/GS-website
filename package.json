@@ -1,0 +1,39 @@
+{
+  "name": "majestic-satellite",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/react": "^2.2.1",
+    "@astrojs/tailwind": "^4.0.0",
+    "@nanostores/react": "github:nanostores/react",
+    "@syncfusion/ej2-react-schedule": "^22.2.8",
+    "@types/react": "^18.2.19",
+    "@types/react-dom": "^18.2.7",
+    "astro": "^2.10.3",
+    "axios": "^1.4.0",
+    "date-fns": "^2.30.0",
+    "lucide-react": "^0.268.0",
+    "nanostores": "^0.9.3",
+    "node-fetch": "^3.3.2",
+    "react": "^18.2.0",
+    "react-calendar": "^4.6.0",
+    "react-day-picker": "^8.8.1",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.10.1",
+    "tailwindcss": "^3.3.3",
+    "bootstrap":"^5.2.2",
+    "react-bootstrap":"^2.6.0"
+    },
+  "description": "``` npm create astro@latest -- --template basics ```",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

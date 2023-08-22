@@ -1,0 +1,27 @@
+---
+import fetch from 'node-fetch';
+const res = await fetch('https://api.ipify.org?format=json');
+const data = await res.json();
+const ipAddress = data.ip;
+// const response_country = await fetch(`https://ipinfo.io/101.198.192.255/json`);
+const response_country = await fetch(`https://ipinfo.io/${ipAddress}/json`);
+const country_json = await response_country.json();
+
+const country = country_json.country;
+
+// const pricefromdb = await fetch(`http://localhost:3478/postgres/pricing/${country}`)
+// const justprice = await pricefromdb.json();
+---
+
+<div class="flex flex-col items-center">
+  <p class="text-red-500 block">Your Ip Address: {ipAddress}</p>
+  <p class="text-red-500">Your Country : {country}</p>
+  <!-- <p class="text-red-500"> price for the sunscription: {price} </p> -->
+</div>
+<div class="flex flex-col justify-center items-center mt-6">
+  <!-- <div>
+    <video  controls="" autoplay="" transition:name="media-player" transition:persist transition:persist>
+        <source src="https://ia804502.us.archive.org/33/items/GoldenGa1939_3/GoldenGa1939_3_512kb.mp4" type="video/mp4">
+    </video>
+  </div> -->
+</div>

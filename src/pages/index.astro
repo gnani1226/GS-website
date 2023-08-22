@@ -1,0 +1,188 @@
+---
+const title = 'Godspeed';
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Reactcard from '../components/Reactcard'
+import Testipaddr from '../components/Testipaddr.astro';
+import CartFlyoutToggle from '../components/CartFlyoutToggle';
+import CartFlyout from '../components/CartFlyout';
+// import popupbtn
+import PopupBtn from '../components/PopupBtn'
+import Calendarimport from '../components/Calendarimport.jsx'
+
+---
+
+<!-- bg-gradient-to-r from-[rgba(2,4,5,255)] to-[rgba(3,5,6,255)] via-[rgba(28,8,45,255)] via-[rgba(29,9,46,255)] via-[rgba(29,9,46,255)] -->
+
+<Layout title="Welcome to Astro.">
+  <div class="min-h-screen custom-sec-div">
+  <section class="text-white pb-20 flex flex-col justify-center items-center custom-section">
+    <h1 class="text-7xl mb-4">Airlift your tech products</h1>
+    <h6 class="mt-4 text-2xl leading-10">Godspeed is a tech suite of tools, standards, integrations, abstractions, teachings and best practices, all intricately weaved together with behind the scenes magic.</h6>
+    <div class="hero-btns gap-4">
+      <PopupBtn client:load/>
+      <div class="link-card-grid">
+        <li class="link-card">
+          <a href="#">Get free demo</a>
+        </li>
+      </div>
+      <!-- <div class="container bg-blue-500 px-4 py-1">
+        <button class="">Get free demo</button>
+      </div> -->
+    </div>
+  </section>
+  <div class="flex flex-col gap-x-6 gap-y-8 px-4 md:px-6 lg:flex-row lg:justify-between lg:items-center">
+    <p class="body text-white px-8 text-astro-gray-200 lg:max-w-[12rem] lg:px-0 lg:text-center xl:text-lg">Used by top teams in tech:</p>
+    <!-- astro-5VUVVKEJ -->
+    <!-- gap-x-8 gap-y-6 px-4 -->
+    <div class="flex items-center justify-center gap-10  ">
+      <img src="https://res.cloudinary.com/dfuwiecz0/image/upload/v1692626920/Godspeed/ALM_19-A_LogoINT_4c_niey56.png" alt="pine labs" 
+      width="100" height="100" class="h-8" />
+      <img src="https://res.cloudinary.com/dfuwiecz0/image/upload/v1692626920/Godspeed/ALM_19-A_LogoINT_4c_niey56.png" alt="pine labs" 
+      width="100" height="200" class="h-8" />
+      <img src="https://res.cloudinary.com/dfuwiecz0/image/upload/v1692626920/Godspeed/ALM_19-A_LogoINT_4c_niey56.png" alt="pine labs" 
+      width="100" height="200" class="h-8"/>
+      <img src="https://res.cloudinary.com/dfuwiecz0/image/upload/v1692626920/Godspeed/ALM_19-A_LogoINT_4c_niey56.png" alt="pine labs" 
+      width="100" height="200" class="h-8"/>
+      <img src="https://res.cloudinary.com/dfuwiecz0/image/upload/v1692626920/Godspeed/ALM_19-A_LogoINT_4c_niey56.png" alt="pine labs" 
+      width="100" height="200" class="h-8"/>
+      <img src="https://res.cloudinary.com/dfuwiecz0/image/upload/v1692626920/Godspeed/ALM_19-A_LogoINT_4c_niey56.png" alt="pine labs" 
+      width="100" height="200" class="h-8"/>
+      <img src="https://res.cloudinary.com/dfuwiecz0/image/upload/v1692626920/Godspeed/ALM_19-A_LogoINT_4c_niey56.png" alt="pine labs" 
+      width="100" height="200" class="h-8"/>
+    </div>
+  </div>
+  <Calendarimport client:load/>
+</div>
+
+</Layout>
+
+  <style>
+    /* .astro-a {
+      position: absolute;
+      top: -32px;
+      left: 50%;
+      transform: translatex(-50%);
+      width: 220px;
+      height: auto;
+      z-index: -1;
+    } */
+    /* h1 {
+      font-size: 4rem;
+      font-weight: 700;
+      line-height: 1;
+      text-align: center;
+      margin-bottom: 1em;
+    } */
+    .custom-head{
+      /* padding-top: 50px; */
+    }
+
+    .text-gradient1 {
+      color: #ffffff;
+      font-size: 50px;
+    }
+    .instructions {
+      margin-bottom: 2rem;
+      border: 1px solid rgba(var(--accent-light), 25%);
+      background: linear-gradient(
+        rgba(var(--accent-dark), 66%),
+        rgba(var(--accent-dark), 33%)
+      );
+      padding: 1.5rem;
+      border-radius: 8px;
+    }
+    .instructions code {
+      font-size: 0.8em;
+      font-weight: bold;
+      background: rgba(var(--accent-light), 12%);
+      color: rgb(var(--accent-light));
+      border-radius: 4px;
+      padding: 0.3em 0.4em;
+    }
+    .instructions strong {
+      color: rgb(var(--accent-light));
+    }
+    .link-card-grid {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      /* margin-top: 50px; */
+      /* overflow: hidden; */
+    
+    }
+    @media (min-width: 768px) {
+      .link-card-grid{
+        flex-direction: row;
+      }
+    }
+    .custom-sec-div{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content:flex-start;
+      align-items: center;
+      text-align: center;
+      /* background: conic-gradient(#ff0000, #00ff00, #0000ff); */
+      /* background: conic-gradient(rgba(2,4,5,255),rgba(3,5,6,255),rgba(28,8,45,255),rgba(29,9,46,255),rgba(29,9,46,255)); */
+      background: radial-gradient(ellipse farthest-corner at center, #4a3579, #181b20);
+      /* background: radial-gradient(ellipse farthest-corner at center, rgba(28,8,65,255),rgba(2,4,5,255)); */
+
+    }
+
+
+    .custom-section{
+      width: 40%;
+      padding-top: 100px;
+    }
+    .hero-btns{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      /* width: 50%; */
+    }
+  .link-card {
+    list-style: none;
+    display: flex;
+    margin: 20px;
+    /* padding: 5px 10px 5px 10px; */
+    width: auto;
+    text-align: center;
+    padding: 1px;
+    background-color: #23262d;
+    background-image: none;
+    /* background-size: 400%; */
+    border-radius: 7px;
+    /* background-position: 100%; */
+    transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    /* overflow: hidden; */
+  }
+  .link-card > a {
+    width: 100%;
+    text-decoration: none;
+    line-height: 0.5;
+    padding: calc(1.5rem - 1px);
+    /* padding: 5px 10px 5px 10px; */
+    border-radius: 8px;
+    color: white;
+    background-color: #23262d;
+    /* opacity: 0.8; */
+  }
+  .link-card:hover {
+    transform: translateY(-10px);
+    transition: transform 0.3s ease;
+  }
+  .link-card:is(:hover, :focus-within) {
+    background-position: 0;
+    /* background-image: var(--accent-gradient); */
+  }
+  /* .link-card:is(:hover, :focus-within) h2 {
+    color: rgb(var(--accent-light));
+  } */
+</style>
+
+../components/Calendarcustom.jsx/index.js
